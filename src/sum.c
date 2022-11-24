@@ -16,14 +16,34 @@ int sum (int n)
 }
 
 /* Sum integers 1 to n */
+//Sumtail using tail recurssion 
 int sumtail (int n, int total)
 {
-    return 0;
+  //Pre-condition
+  assert(n >= 1);
+
+  //Post-Condition
+  if (n > 1)
+    return sumtail(n-1,total+n);
+  else
+    return (total + 1);
 }
 
 /* Sum integers 1 to n */
+//sumwhile using a while loop
 int sumwhile (int n)
 {
-  return 0;
+  //Precondition
+  assert(n > 0);
+  
+  int i = 0; // "counter"
+  
+  //Post-condition
+  //Loop runs as long as n has a value greater than zero and n will be added to the total value "i" each itteration of loop.
+  while (n>=1) {
+    i +=n;
+    n--;
+  }
+  return i;
 }
 
